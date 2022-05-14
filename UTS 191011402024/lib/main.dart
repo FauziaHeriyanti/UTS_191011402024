@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'FLutter Demo Home Page'),
     );
   }
 }
@@ -75,41 +75,75 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 3,
+        children: <Widget>[
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[100],
+            child: const Text("one"),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[200],
+            child: const Text('Two'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[300],
+            child: const Text('Three'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[400],
+            child: const Text('four'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[500],
+            child: const Text('Five'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[600],
+            child: const Text('Six'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[700],
+            child: const Text('Seven'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[800],
+            child: const Text('Eight'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.teal[900],
+            child: const Text('Nine'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.lightGreen[100],
+            child: const Text('Ten'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.lightGreen[200],
+            child: const Text('Eleven'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            color: Colors.lightGreen[300],
+            child: const Text('Twelve'),
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
